@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #efefef;
+    background-color: #f6f6f6;
 }
 header {
     font-family: MeriendaOne;
@@ -30,7 +30,7 @@ header {
 
 .content {
     width: 60%;
-    margin: 90px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
+    margin: 70px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
     background-color: #ffffff;
     padding: 40px;
     padding-top: 20px;
@@ -42,10 +42,13 @@ header {
 .menu-btn {
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 5px 5px;
     margin-left: 10px;
     border-radius: 3px;
-    color: #cccccc; /* 默认颜色为灰色 */
+    color: #a3a3a3; /* 默认颜色为灰色 */
+    backdrop-filter: blur(5px);
+    background: none;
+    font-size:medium;
 }
 
 /* 当鼠标悬停在按钮上时的样式 */
@@ -61,5 +64,11 @@ header {
 @media (max-width: 1000px) {
     .content {
         width: 75%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
+    }
+}
+
+@media (max-width: 800px) {
+    .content {
+        width: 100%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
     }
 }
