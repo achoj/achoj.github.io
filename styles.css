@@ -70,6 +70,7 @@ header {
 .navigation-bar a {
     color: black;
     text-decoration: none;
+    display: inline-block; /* 使超链接只占据文本所在的空间 */
 }
 
 .navigation-bar {
