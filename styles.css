@@ -16,10 +16,10 @@ header {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    padding: 15px 40px;
+    padding: 15px 30px;
     text-align: left;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px); /* 添加高斯模糊 */
+    backdrop-filter: blur(8px); /* 添加高斯模糊 */
     z-index: 1000; /* 确保header在顶部 */
 }
 .header-content {
@@ -28,72 +28,54 @@ header {
 }
 
 .content {
+    font-size: 95%;
     width: 60%;
-    margin: 70px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
+    margin: 40px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
     background-color: #ffffff;
-    padding: 40px;
+    padding: 50px;
     padding-top: 20px;
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
     border-radius: 3px;
+    margin-left: 10%; /* 添加这一行来使内容向左偏移 */
+    min-width: 630px;
 }
 
 
-@media (max-width: 1000px) {
-    .content {
-        width: 75%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
-    }
-}
 
 @media (max-width: 800px) {
     .content {
-        width: 90%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
+        width: 85%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 400px;
     }
 }
 
-.header-content span {
+
+.header-content span a {
     font-family: MeriendaOne;
     margin-right: 20px;
+    color: black;
+    text-decoration: none;
 }
 
-.header-content nav a {
-    text-decoration: underline;
-    color: #000; /* 默认颜色为黑色 */
+.navigation-bar a:not(:last-child)::after {
+    content: " | ";
+    color: rgb(206, 206, 206);
+    font-size: larger;
+    margin-right: 8px; /* 调整间距大小 */
+    margin-left: 8px; /* 调整间距大小 */
 }
 
-.header-content nav a:hover {
-    color: #FF0000; /* 鼠标悬停时的颜色为红色 */
+.navigation-bar a {
+    color: black;
+    text-decoration: none;
 }
 
-/* 对应页面的超链接下划线为红色 */
-body.index-page nav a[href="index.html"],
-body.works-page nav a[href="works.html"],
-body.posts-page nav a[href="posts.html"] {
-    color: #FF0000;
-}
-
-
-
-
-
-/* 按钮的共同样式 */
-.menu-btn {
-    border: none;
-    cursor: pointer;
-    padding: 5px 5px;
+.navigation-bar {
     margin-left: 10px;
-    border-radius: 3px;
-    color: #a3a3a3; /* 默认颜色为灰色 */
-    backdrop-filter: blur(5px);
-    background: none;
-    font-size:medium;
 }
 
-/* 当鼠标悬停在按钮上时的样式 */
-.menu-btn:hover {
-    color: #000000; /* 悬停时颜色为黑色 */
-}
 
-/* 当按钮表示当前活动页面时的样式 */
-.active-page {
-    color: #ff0000; /* 假设激活页面的颜色为红色 */
-}
+
+
