@@ -10,6 +10,13 @@
     src: url("./font/Andika-Regular.ttf");
 }
 
+@font-face {
+    font-family: 'Menlo';
+    size: 150%;
+    src: url("./font/Menlo-Regular.ttf");
+}
+
+
 body {
     margin: 0;
     font-family: 'Andika', Helvetica, sans-serif;
