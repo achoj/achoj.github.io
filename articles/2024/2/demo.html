@@ -1,4 +1,28 @@
-<h2 id="2">第2章</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <span><a href="/index.html">Achoj's Blog</a></span>
+            <div class="navigation-bar">
+                <a class="index" href="/index.html">首页</a>
+                <span class="sep"> | </span>
+                <a href="/posts.html">文章</a>
+                <span class="sep"> | </span>
+                <a href="/toy-program.html">玩具</a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h2 id="2">第2章</h2>
 <h3 id="">页表</h3>
 <p>操作系统通过页表机制实现了对内存空间的控制。页表使得 xv6 能够让不同进程各自的地址空间映射到相同的物理内存上，还能够为不同进程的内存提供保护。
 除此之外，我们还能够通过使用页表来间接地实现一些特殊功能。xv6 主要利用页表来区分多个地址空间，保护内存。另外，它也使用了一些简单的技巧，即把不同地址空间的多段内存映射到同一段物理内存（内核部分），在同一地址空间中多次映射同一段物理内存（用户部分的每一页都会映射到内核部分），以及通过一个没有映射的页保护用户栈。本章的其余部分将详细地探讨 x86 硬件提供的页表以及 xv6 对页表的使用。</p>
@@ -60,3 +84,9 @@ Program Header:
 <li><p>如果 xv6 没有使用超级页，我们应该如何声明 <code>entrypgdir</code>？</p></li>
 <li><p>Unix 在 <code>exec</code> 的实现中考虑了对 shell 脚本的特殊处理。执行一个以文本 <code>#!</code> 开头的文件时，第一行内容会被系统理解为执行该文件的翻译器。例如，如果用 <code>exec</code> 执行 <code>myprog arg1</code>，而 <code>myprog</code> 的第一行又是 <code>#!interp</code>，那么 <code>exec</code> 会运行命令 <code>/interp myprog arg1</code>。如何 xv6 中实现该功能？</p></li>
 </ol>
+
+<pre><code></code></pre>
+    </div>
+</body>
+
+</html>
