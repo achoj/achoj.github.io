@@ -10,11 +10,6 @@
     src: url("./font/Andika-Regular.ttf");
 }
 
-@font-face {
-    font-family: 'Menlo';
-    src: url("./font/Menlo-Regular.ttf");
-}
-
 body {
     margin: 0;
     font-family: 'Andika', Helvetica, sans-serif;
@@ -160,18 +155,13 @@ h6 {
 /* 美化代码块 */
 pre code {
     font-family: Hack;
-    display: block;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    overflow-x: auto;
 }
 
 /* 美化行内代码 */
 code {
     font-family: Hack;
-    font-size: 80%;
+    font-size: 90%;
     padding: 2px 4px;
-    background-color: #f4f4f4;
-    border-radius: 3px;
+    background-color: #ededed;
+    border-radius: 2px;
 }
