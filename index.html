@@ -12,79 +12,19 @@
 <body>
     <header>
         <div class="header-content">
-            Achoj's Blog
+            <span>Achoj's Blog</span>
             <nav>
-                <button id="home-btn" class="menu-btn home-btn" title="Go to Home">Home</button>
-                <button id="posts-btn" class="menu-btn posts-btn" title="View Posts">Posts</button>
-                <button id="works-btn" class="menu-btn works-btn" title="View Works">Works</button>
+                <a href="index.html">index</a>
+                <a href="works.html">works</a>
+                <a href="posts.html">posts</a>
             </nav>
         </div>
     </header>
 
     <div class="content">
+        <h1>Title</h1>
+        This is the content.
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const homeBtn = document.getElementById("home-btn");
-            const postsBtn = document.getElementById("posts-btn");
-            const worksBtn = document.getElementById("works-btn");
-            const contentDiv = document.querySelector(".content");
-
-            // 默认显示 Home 页面
-            contentDiv.innerHTML = fetchHTMLContent("home.html");
-            homeBtn.classList.add("active-page");
-
-            homeBtn.addEventListener("click", function () {
-                fetchAndDisplayContent("home.html");
-                setActiveButton(homeBtn);
-            });
-
-            postsBtn.addEventListener("click", function () {
-                fetchAndDisplayContent("posts.html");
-                setActiveButton(postsBtn);
-            });
-
-            worksBtn.addEventListener("click", function () {
-                fetchAndDisplayContent("works.html");
-                setActiveButton(worksBtn);
-            });
-
-            // 设置活动按钮的样式
-            function setActiveButton(btn) {
-                const buttons = document.querySelectorAll(".menu-btn");
-                buttons.forEach(button => {
-                    button.classList.remove("active-page");
-                });
-                btn.classList.add("active-page");
-            }
-
-            // 异步获取 HTML 内容并显示
-            function fetchAndDisplayContent(page) {
-                fetchHTMLContent(page)
-                    .then(htmlContent => {
-                        contentDiv.innerHTML = htmlContent;
-                    })
-                    .catch(error => console.error("Error fetching HTML:", error));
-            }
-
-            // 异步获取 HTML 内容
-            function fetchHTMLContent(page) {
-                return fetch(page)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.text();
-                    })
-                    .catch(error => {
-                        console.error('There has been a problem with your fetch operation:', error);
-                    });
-            }
-            
-        });
-
-    </script>
 </body>
 
 </html>
