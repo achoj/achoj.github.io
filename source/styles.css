@@ -20,8 +20,10 @@
 body {
     margin: 0;
     font-family: 'Andika', Helvetica, sans-serif;
-    background-color: rgb(235, 235, 235);
+
 }
+
+
 header {
     position: fixed;
     top: 0;
@@ -29,33 +31,68 @@ header {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
-    padding: 15px 30px;
+    padding: 15px 3%;
     text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px); /* 添加高斯模糊 */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px); /* 添加高斯模糊 */
     z-index: 1000; /* 确保header在顶部 */
 }
 .header-content {
     display: flex;
     align-items: center;
+    
+}
+
+.header-content {
+    display: inline-block;
+}
+
+.header-content span {
+    position: relative;
+    user-select: none;
+}
+
+
+
+
+.header-content span.drop::after {
+    content: '';
+    margin-right: 20px;
+    margin-left: 20px;
+    top: 0;
+    height: 100%; /* Make the vertical line full height of the span */
+    border-left: 2px solid rgb(206, 206, 206); /* Adjust the style of the vertical line */
+}
+
+.header-content span.hd a {
+    margin-right: 20px; /* Optional: Add some space between the text and the vertical line */
+    font-size: 120%;
+}
+
+
+.additional-text {
+    top: 0;
+    font-size: 16px;
+    color: #777777;
 }
 
 .content {
     width: 60%;
-    margin: 80px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
+    margin: 40px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
     background-color: rgb(255, 255, 255);
-    padding: 50px;
-    padding-top: 40px;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,.3),0 4px 6px -4px rgba(0,0,0,.3);
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+    margin-top: 90px;
+    box-shadow: 0 0px 5px -3px rgba(0,0,0.9,.9),0 0px 3px -3px rgba(0,0,0,.9);
     border-radius: 3px;
     margin-left: 10%; /* 添加这一行来使内容向左偏移 */
     min-width: 630px;
     min-height: 300px;
+    background-color: #ffffff;
 }
 
-.content p:not(:only-child) {
-    line-height: 1.5;
-}
 
 
 @media (max-width: 800px) {
@@ -63,35 +100,29 @@ header {
         width: 85%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
         margin-left: auto;
         margin-right: auto;
-        min-width: 400px;
+        min-width: 350px;
     }
+    .additional-text {
+        display: none;
+    }
+    .header-content span.drop::after {
+        display: none;
+    }
+    
 }
 
 
-.header-content span a {
+span.hd a {
     font-family: MeriendaOne;
     margin-right: 20px;
     color: black;
     text-decoration: none;
 }
-
-
-.navigation-bar a {
-    color: black;
-    text-decoration: none;
-    display: inline-block; /* 使超链接只占据文本所在的空间 */
-    margin-left: 10px;
+span.homepage {
+    margin-right: 20px;
 }
 
-.navigation-bar {
-    margin-left: 10px;
-}
 
-span.sep {
-    margin-left: 10px;
-    color: #8e8e8e;
-    user-select: none; /* 防止用户选择元素内容 */
-}
 
 
 img.avatar {
@@ -99,9 +130,6 @@ img.avatar {
     user-select: none;
 }
 
-.motto {
-    font-family: MeriendaOne;
-}
 
 .name {
     font-family: 'Times New Roman', Times, serif;
@@ -110,32 +138,15 @@ img.avatar {
     color: #4F7DDE;
 }
 
-h2.post-time-header {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.post-item {
-    line-height: 1.5;
-    text-align: left;
-    font-size: 100%;
-    margin-left: 30px;
-}
-
-.post-item a {
-    text-decoration: none;
-    color: #0d0d0d;
-}
 
 /* 当鼠标悬浮在链接上时改变颜色 */
 a:hover {
     color: rgb(104, 143, 242);
+
 }
 
-.post-item span{
-    font-family: MeriendaOne;
-    user-select: none;
-    float: right;
-}
+
+
 
 li {
     line-height: 1.8;
@@ -145,18 +156,12 @@ li::marker {
     color: #8e8e8e;
 }
 
-h1 {
-    text-align: center;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #6b77a9;
-}
+
+html{
+    scroll-padding-top: 75px;
+  }
+
 
 
 /* 美化代码块 */
@@ -172,4 +177,55 @@ code {
     padding: 2px 4px;
     background-color: #ededed;
     border-radius: 2px;
+}
+
+
+
+
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Your existing CSS styles */
+
+/* Modified styles for dropdown content */
+.dropdown-content {
+    overflow-y: auto; /* 添加滚动条 */
+    max-height: 300px; /* 固定高度 */
+    width: 200px; /* 固定宽度 */
+    padding-left: 20px;
+}
+
+.dropdown-content a {
+    font-family: 'Andika';
+    font-size: 70%; /* 减小字体大小 */
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content ul {
+    padding-left: 20px;
+}
+
+
+
+.dropdown-content a:hover {
+    color: #39a3e1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
