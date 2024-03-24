@@ -7,9 +7,9 @@
     <link rel="icon" href="./favicon.ico">
     <title>My Blog</title>
     <link rel="stylesheet" href="/source/styles.css">
-    <link rel="stylesheet" href="markdown.css">
-    <!-- <link rel="stylesheet" href="github.css">
-    <script src="/source/highlight.min.js"></script> -->
+    <link rel="stylesheet" href="/source/markdown.css">
+    <link rel="stylesheet" href="/source/default.min.css">
+    <script src="/source/highlight.min.js"></script>
     <script src="/source/showdown.min.js"></script>
 </head>
 
@@ -18,11 +18,11 @@
         <div class="header-content">
             <span class="hd"><a href="index.html">Achoj's Blog</a></span>
             <span class="homepage">
-                <a href="index.html"><img src="homepage.ico" alt="Homepage" title="Back to homepage" width="18px"></a>
+                <a href="index.html"><img src="/source/images/homepage.ico" alt="Homepage" title="Back to homepage" width="18px"></a>
             </span>
             <span class="drop">
                 <div class="dropdown">
-                    <img src="toc-svgrepo-com.svg" alt="Dropdown Menu" width="22px" onclick="toggleDropdown()">
+                    <img src="/source/images/toc-svgrepo-com.svg" alt="Dropdown Menu" width="22px" onclick="toggleDropdown()">
                     <div id="dropdownContent" class="dropdown-content">
                         Hello world
                     </div>
@@ -37,97 +37,91 @@
 
         </div>
     </article>
+</body>
 
-    <script>
-        function extractHeadings(html) {
-            // 创建一个虚拟的 div 元素，用于解析 HTML
-            const div = document.createElement('div');
-            div.innerHTML = html;
+<script>
+    function extractHeadings(html) {
+        // 创建一个虚拟的 div 元素，用于解析 HTML
+        const div = document.createElement('div');
+        div.innerHTML = html;
 
-            // 获取所有的标题元素
-            const headings = div.querySelectorAll('h1, h2, h3, h4, h5, h6');
-            let result = ''; // 初始化结果字符串
-            let notfirst = false;
+        // 获取所有的标题元素
+        const headings = div.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        let result = ''; // 初始化结果字符串
+        let notfirst = false;
 
-            if (headings.length > 0) {
-                let currentLevel = 0; // 当前标题级别
+        if (headings.length > 0) {
+            let currentLevel = 0; // 当前标题级别
 
-                headings.forEach((heading) => {
-                    const level = parseInt(heading.tagName.charAt(1)); // 提取标题级别
-                    const id = heading.id; // 提取标题 id
-                    const title = heading.textContent; // 提取标题文本
+            headings.forEach((heading) => {
+                const level = parseInt(heading.tagName.charAt(1)); // 提取标题级别
+                const id = heading.id; // 提取标题 id
+                const title = heading.textContent; // 提取标题文本
 
-                    // 根据标题级别确定嵌套关系
-                    if (level > currentLevel && notfirst) {
-                        // 开始一个更深一级的无序列表
-                        result += '<ul>';
-                    } else if (level < currentLevel) {
-                        // 结束若干级的无序列表
-                        result += '</li></ul>'.repeat(currentLevel - level);
-                    } else if (currentLevel !== 0) {
-                        // 关闭上一个 <li>，保证每个标题都在一个 <li> 中
-                        result += '</li>';
-                    }
-                    notfirst = true;
-                    // 添加目录项
-                    result += `<li><a href="#${id}">${title}</a>`;
+                // 根据标题级别确定嵌套关系
+                if (level > currentLevel && notfirst) {
+                    // 开始一个更深一级的无序列表
+                    result += '<ul>';
+                } else if (level < currentLevel) {
+                    // 结束若干级的无序列表
+                    result += '</li></ul>'.repeat(currentLevel - level);
+                } else if (currentLevel !== 0) {
+                    // 关闭上一个 <li>，保证每个标题都在一个 <li> 中
+                    result += '</li>';
+                }
+                notfirst = true;
+                // 添加目录项
+                result += `<li><a href="#${id}">${title}</a>`;
 
-                    currentLevel = level; // 更新当前标题级别
-                });
+                currentLevel = level; // 更新当前标题级别
+            });
 
-                // 结束所有的无序列表
-                result += '</li>'.repeat(currentLevel);
+            // 结束所有的无序列表
+            result += '</li>'.repeat(currentLevel);
 
-                // 在最外层添加 <ul> 和 </ul>
-                result = `<ul>${result}</ul>`;
-            }
-
-            return result;
+            // 在最外层添加 <ul> 和 </ul>
+            result = `<ul>${result}</ul>`;
         }
 
+        return result;
+    }
 
+    // 加载完成文档后执行的函数
+    document.addEventListener("DOMContentLoaded", function () {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const filePath = urlParams.get('path');
 
+        const htmlContent = document.getElementById('md');
+        const converter = new showdown.Converter();
+        showdown.setOption('omitExtraWLInCodeBlocks', 'true');
+        showdown.setOption('tables', 'true');
 
-
-
-
-        // 加载完成文档后执行的函数
-        document.addEventListener("DOMContentLoaded", function () {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const filePath = urlParams.get('path');
-
-            const htmlContent = document.getElementById('md');
-            const converter = new showdown.Converter();
-            showdown.setOption('omitExtraWLInCodeBlocks', 'true');
-            showdown.setOption('tables', 'true');
-
-            if (filePath) {
-                fetch(filePath)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        const html = converter.makeHtml(data);
-                        // 提取标题
-                        const extractedHeadings = extractHeadings(html);
-                        // 将标题内容放入 dropdownContent
-                        const dropdownContent = document.getElementById('dropdownContent');
-                        dropdownContent.innerHTML = extractedHeadings;
-                        htmlContent.innerHTML = html;
-                        hljs.highlightAll();
-                    })
-                    .catch(error => {
-                        console.error('There was a problem with your fetch operation:', error);
-                    });
-            } else {
-                console.error('File path not provided in query parameters.');
-            }
-        });
-    </script>
-</body>
+        if (filePath) {
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const html = converter.makeHtml(data);
+                    // 提取标题
+                    const extractedHeadings = extractHeadings(html);
+                    // 将标题内容放入 dropdownContent
+                    const dropdownContent = document.getElementById('dropdownContent');
+                    dropdownContent.innerHTML = extractedHeadings;
+                    htmlContent.innerHTML = html;
+                    hljs.highlightAll();
+                })
+                .catch(error => {
+                    console.error('There was a problem with your fetch operation:', error);
+                });
+        } else {
+            console.error('File path not provided in query parameters.');
+        }
+    });
+</script>
 
 </html>
