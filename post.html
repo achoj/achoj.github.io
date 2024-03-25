@@ -96,6 +96,10 @@
         const converter = new showdown.Converter();
         showdown.setOption('omitExtraWLInCodeBlocks', 'true');
         showdown.setOption('tables', 'true');
+        showdown.setOption('parseImgDimensions', 'true');
+        showdown.setOption('simplifiedAutoLink', 'true');
+        showdown.setOption('tasklists', 'true');
+        showdown.setOption('emoji', 'true');
 
         if (filePath) {
             fetch(filePath)

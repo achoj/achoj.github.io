@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="/source/images/favicon.ico" rel="icon"/>
-<title>My Blog</title>
-<link href="/source/styles.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="/source/images/favicon.ico" rel="icon" />
+    <title>My Blog</title>
+    <link href="/source/styles.css" rel="stylesheet" />
 </head>
+
 <body>
-<header>
-<div class="header-content">
-<span class="hd"><a href="index.html">Achoj's Blog</a></span>
-<span class="homepage">
-<a href="index.html"><img alt="Homepage" src="/source/images/homepage.ico" title="Back to homepage" width="18px"/></a>
-</span>
-<span class="additional-text">Less is moreeeeeeeeee</span>
-</div>
-</header>
-<div class="content" id="md">
-<p>
-<img alt="" class="avatar" src="/source/images/avatar.png" width="109px"/>
-<br/>
-<div class="avatar-name">Achoj</div>
-        Build this website with gpt.
+    <header>
+        <div class="header-content">
+            <span class="hd"><a href="index.html">Achoj's Blog</a></span>
+            <span class="homepage">
+                <a href="index.html"><img alt="Homepage" src="/source/images/homepage.ico" title="Back to homepage"
+                        width="18px" /></a>
+            </span>
+            <span class="additional-text">Less is moreeeeeeeeee</span>
+        </div>
+    </header>
+    <div class="content" id="md">
+        <p>
+            <img alt="" class="avatar" src="/source/images/avatar.png" width="200px" />
+            <br />
+            <div class="avatar-name">Achoj</div>
         </p>
-<hr/>
-<p>记录任何我想记录的东西。</p>
-<p>喜欢编程、音乐跟电影。</p>
-
-
-
-<div class="post-type">编程</div>
-<div id="file-list" type="programming">
-<div class="post-item" path="articles/2024/03_24_网站初步设计_p.md">
-    <span class="name">网站初步设计</span>
-    <span class="time">2024-03-24</span>
-</div><!-- end of programming -->
-</div>
+        <p style="color: rgb(25, 90, 230);">Build this website with gpt</p>
+        <p>记录任何我想记录的东西。<br> 喜欢编程、音乐跟电影。</p>
+        <hr />
 
 
 
 
-<div class="post-type">随记</div>
-<div class="file-list" type="normal">
-<div class="post-item" path="articles/2024/03_24_阶段性总结_n.md">
-    <span class="name">阶段性总结</span>
-    <span class="time">2024-03-24</span>
-</div>
-<div class="post-item" path="articles/2024/03_08_考研规划_n.md">
-    <span class="name">考研规划</span>
-    <span class="time">2024-03-08</span>
-</div>
-<div class="post-item" path="articles/2024/02_28_测试文章_n.md">
-    <span class="name">测试文章</span>
-    <span class="time">2024-02-28</span>
-</div>
-<div class="post-item" path="articles/2024/03_24_TODO_n.md">
-    <span class="name">TODO</span>
-    <span class="time">2024-03-24</span>
-</div>
-<div class="post-item" path="articles/2023/12_01_来自2023的测试文章_n.md">
-    <span class="name">来自2023的测试文章</span>
-    <span class="time">2023-12-01</span>
-</div><!-- end of normal -->
-</div>
+
+        <div class="post-type">编程</div>
+        <div id="file-list" type="programming">
+            <div class="post-item" path="articles/2024/03_24_网站初步设计_p.md">
+                <span class="name">网站初步设计</span>
+                <span class="time">2024-03-24</span>
+            </div><!-- end of programming -->
+        </div>
 
 
-</div>
+
+
+        <div class="post-type">随记</div>
+        <div class="file-list" type="normal">
+            <div class="post-item" path="articles/2024/03_24_阶段性总结_n.md">
+                <span class="name">阶段性总结</span>
+                <span class="time">2024-03-24</span>
+            </div>
+            <div class="post-item" path="articles/2024/03_08_考研规划_n.md">
+                <span class="name">考研规划</span>
+                <span class="time">2024-03-08</span>
+            </div>
+            <div class="post-item" path="articles/2024/02_28_测试文章_n.md">
+                <span class="name">测试文章</span>
+                <span class="time">2024-02-28</span>
+            </div>
+            <div class="post-item" path="articles/2024/03_24_TODO_n.md">
+                <span class="name">TODO</span>
+                <span class="time">2024-03-24</span>
+            </div>
+            <div class="post-item" path="articles/2023/12_01_来自2023的测试文章_n.md">
+                <span class="name">来自2023的测试文章</span>
+                <span class="time">2023-12-01</span>
+            </div><!-- end of normal -->
+        </div>
+
+
+    </div>
 </body>
 <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const posts = document.querySelectorAll(".post-item");
-            posts.forEach(post => {
-                post.addEventListener("click", function() {
-                    const path = this.getAttribute("path");
-                    window.location.href = "post.html?path=" + encodeURIComponent(path);
-                });
+    document.addEventListener("DOMContentLoaded", function () {
+        const posts = document.querySelectorAll(".post-item");
+        posts.forEach(post => {
+            post.addEventListener("click", function () {
+                const path = this.getAttribute("path");
+                window.location.href = "post.html?path=" + encodeURIComponent(path);
             });
         });
+    });
 </script>
+
 </html>

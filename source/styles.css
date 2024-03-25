@@ -80,12 +80,14 @@ header {
     padding-bottom: 30px;
     margin-bottom: 100px;
     margin-top: 80px;
-    box-shadow: 0 0px 5px -3px rgba(0,0,0.9,.9),0 0px 3px -3px rgba(0,0,0,.9);
+    /* box-shadow: 0 0px 5px -3px rgba(0,0,0.9,.9),0 0px 3px -3px rgba(0,0,0,.9); */
     border-radius: 3px;
     margin-left: 10%; /* 添加这一行来使内容向左偏移 */
     min-width: 630px;
     min-height: 300px;
-    background-color: #ffffff;
+
+        /* 添加以下代码以将边框改成线条 */
+        border: 1px solid #d1d1d1; /* 设置边框为1像素实线，颜色为黑色 */
 }
 
 
@@ -129,7 +131,7 @@ img.avatar {
     font-family: 'Times New Roman', Times, serif;
     font-size: 200%;
     font-weight: 400;
-    color: #4F7DDE;
+    /* color: #4F7DDE; */
 }
 
 
@@ -139,7 +141,10 @@ a:hover {
 
 }
 
-
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
 
 
 li {
@@ -154,7 +159,7 @@ li::marker {
 
 html{
     scroll-padding-top: 75px;
-  }
+}
 
 
 
@@ -256,9 +261,9 @@ code {
 .post-type {
     user-select: none;
     text-align: center;
-    font-size: large;
+    font-size: 150%;
     margin-top: 20px;
-    color: rgb(37, 106, 146);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .post-item {
@@ -273,5 +278,6 @@ code {
     float: right;
     font-family: 'Andika';
     font-size: 90%;
+    color: grey;
     user-select: none;
 }
