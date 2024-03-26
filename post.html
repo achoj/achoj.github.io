@@ -7,7 +7,7 @@
     <link rel="icon" href="./favicon.ico">
     <title>My Blog</title>
     <link rel="stylesheet" href="/source/styles.css">
-    <link rel="stylesheet" href="/source/markdown.css">
+
     <link rel="stylesheet" href="/source/default.min.css">
     <script src="/source/highlight.min.js"></script>
     <script src="/source/showdown.min.js"></script>
@@ -94,12 +94,12 @@
 
         const htmlContent = document.getElementById('md');
         const converter = new showdown.Converter();
-        showdown.setOption('omitExtraWLInCodeBlocks', 'true');
-        showdown.setOption('tables', 'true');
-        showdown.setOption('parseImgDimensions', 'true');
-        showdown.setOption('simplifiedAutoLink', 'true');
-        showdown.setOption('tasklists', 'true');
-        showdown.setOption('emoji', 'true');
+        converter.setOption('omitExtraWLInCodeBlocks', 'true');
+        converter.setOption('tables', 'true');
+        converter.setOption('parseImgDimensions', 'true');
+        converter.setOption('simplifiedAutoLink', 'true');
+        converter.setOption('tasklists', 'true');
+        converter.setOption('emoji', 'true');
 
         if (filePath) {
             fetch(filePath)
