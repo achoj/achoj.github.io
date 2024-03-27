@@ -120,6 +120,7 @@
                     hljs.highlightAll();
                 })
                 .catch(error => {
+                    htmlContent.innerHTML = "<h1>error nothing here</h1>";
                     console.error('There was a problem with your fetch operation:', error);
                 });
         } else {

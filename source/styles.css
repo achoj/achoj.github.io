@@ -27,14 +27,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)); /* 从左到右逐渐减弱的毛玻璃效果 */
     color: #000000;
-    padding: 15px 3%;
+    padding: 8px 3%;
     text-align: left;
+    backdrop-filter: saturate(150%) blur(4px);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px); /* 添加高斯模糊 */
-    z-index: 1000; /* 确保header在顶部 */
+    /* backdrop-filter: blur(6px); 添加高斯模糊 */
+    z-index: 1000; /* 确保 header 在顶部 */
 }
+
+
 .header-content {
     display: flex;
     align-items: center;
@@ -78,16 +81,13 @@ header {
     background-color: rgb(255, 255, 255);
     padding: 40px;
     padding-bottom: 30px;
-    margin-bottom: 100px;
-    margin-top: 80px;
-    /* box-shadow: 0 0px 5px -3px rgba(0,0,0.9,.9),0 0px 3px -3px rgba(0,0,0,.9); */
+    margin-bottom: 200px;
+    margin-top: 60px;
+    box-shadow: 0 0px 5px -3px rgba(0,0,0.9,.9),0 0px 3px -3px rgba(0,0,0,.9);
     border-radius: 3px;
     margin-left: 10%; /* 添加这一行来使内容向左偏移 */
     min-width: 630px;
     min-height: 300px;
-
-        /* 添加以下代码以将边框改成线条 */
-        border: 1px solid #d1d1d1; /* 设置边框为1像素实线，颜色为黑色 */
 }
 
 
