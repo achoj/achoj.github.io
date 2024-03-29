@@ -1,18 +1,24 @@
 @font-face {
-    font-family: 'MeriendaOne';
-    src: url("../font/MeriendaOne-Regular.ttf");
+    font-family: 'Me';
+    src: url("./font/MeriendaOne-Regular.ttf");
 }
 
 @font-face {
     font-family: 'Andika';
     size: 150%;
-    src: url("../font/Andika-Regular.ttf");
+    src: url("./font/Andika-Regular.ttf");
 }
 
 @font-face {
     font-family: 'Hack';
     size: 150%;
-    src: url("../font/Hack-Regular.ttf");
+    src: url("./font/Hack-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: 'statis';
+    src: url("./font/Satisfy-Regular.ttf");
 }
 
 
@@ -27,151 +33,72 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)); /* 从左到右逐渐减弱的毛玻璃效果 */
     color: #000000;
     padding: 8px 3%;
+    padding-top: 14px;
     text-align: left;
-    backdrop-filter: saturate(150%) blur(4px);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(6px); 添加高斯模糊 */
-    z-index: 1000; /* 确保 header 在顶部 */
+    backdrop-filter: blur(8px); /* 应用一个10像素的模糊效果 */
+    background-color: rgba(255, 255, 255, 0.7); /* 背景颜色，透明度根据需求调*/
+    z-index: 1000;
+    /* 确保 header 在顶部 */
 }
 
-
-.header-content {
-    display: flex;
-    align-items: center;
-    
-}
-
-.header-content {
-    display: inline-block;
-}
-
-.header-content span {
-    position: relative;
-    user-select: none;
-}
-
-
-.header-content span.additional-text::before {
-    content: '';
-    margin-right: 20px;
-    margin-left: 20px;
-    top: 0;
-    height: 100%; /* Make the vertical line full height of the span */
-    border-left: 2px solid rgb(206, 206, 206); /* Adjust the style of the vertical line */
-}
-
-.header-content span.hd a {
-    margin-right: 20px; /* Optional: Add some space between the text and the vertical line */
-    font-size: 120%;
-}
-
-
-.additional-text {
-    top: 0;
-    font-size: 16px;
-    color: #777777;
-}
 
 .content {
     width: 60%;
-    margin: 40px auto 20px; /* 添加额外的顶部间距，以防止内容被header遮挡 */
+    margin: 40px auto 20px;
+    /* 添加额外的顶部间距，以防止内容被header遮挡 */
     background-color: rgb(255, 255, 255);
     padding: 40px;
     padding-bottom: 30px;
     margin-bottom: 200px;
-    margin-top: 60px;
-    box-shadow: 0 0px 5px -3px rgba(0,0,0.9,.9),0 0px 3px -3px rgba(0,0,0,.9);
-    border-radius: 3px;
-    margin-left: 10%; /* 添加这一行来使内容向左偏移 */
+    margin-top: 80px;
+    box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .9), 0 0px 3px -3px rgba(0, 0, 0, .9);
+    /* border-radius: 3px; */
+    margin-left: 10%;
+    /* 添加这一行来使内容向左偏移 */
     min-width: 630px;
-    min-height: 300px;
+    min-height: 500px;
+    font-size: 110%;
+    color: #3c3c3c;
 }
 
-
+footer {
+    text-align: center;
+    color: rgb(134, 0, 229);
+    margin-bottom: 10px;
+    user-select: none;
+}
 
 @media (max-width: 800px) {
     .content {
-        width: 85%; /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
+        width: 85%;
+        /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
         margin-left: auto;
         margin-right: auto;
         min-width: 350px;
     }
+
     .additional-text {
         display: none;
     }
+
     .header-content span.drop::after {
         display: none;
     }
-    
-}
-
-
-span.hd a {
-    font-family: MeriendaOne;
-    margin-right: 20px;
-    color: black;
-    text-decoration: none;
-}
-
-span.homepage {
-    margin-right: 20px;
-}
-
-
-img.avatar {
-    float: left;
-    user-select: none;
-}
-
-
-.avatar-name {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 200%;
-    font-weight: 400;
-    /* color: #4F7DDE; */
-}
-
-
-/* 当鼠标悬浮在链接上时改变颜色 */
-a:hover {
-    color: rgb(104, 143, 242);
 
 }
-
-h1 {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
-
-
-li {
-    line-height: 1.8;
-}
-
-li::marker {
-    color: #8e8e8e;
-}
-
-
-
-html{
-    scroll-padding-top: 75px;
-}
-
-
 
 /* 美化代码块 */
 pre code {
-    font-family: Hack;
+    font-family: 'Hack';
     line-height: 1.2;
 }
 
 /* 美化行内代码 */
 code {
-    font-family: Hack;
+    font-family: monospace;
     font-size: 80%;
     padding: 4px;
     border-radius: 2px;
@@ -179,9 +106,106 @@ code {
 }
 
 
+.wiki-header {
+    font-family: 'statis';
+    font-size: 200%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.wiki-header::after {
+    content: "";
+    margin-left: 30px;
+    padding-left: 15px;
+    border-left: 2px solid #dddddd;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img.avatar {
+    float:inline-start;
+    user-select: none;
+    margin-left: 5%;
+}
+
+.avatar-content {
+    padding-top: 50px;
+}
+
+.avatar-name {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 190%;
+    margin-top: 25px;
+}
+
+.avatar-area {
+    margin-bottom: 30px;
+}
+
+.avatar-area p{
+    margin: 10px;
+}
+
+.avatar-area hr {
+    margin-top: 20px;
+}
 
 
-/* 下拉菜单样式 */
+.post-item {
+    cursor: pointer; /* 鼠标样式设置为手型 */
+    transition: background-color 0.3s; /* 添加过渡效果 */
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 3px;
+    overflow: hidden; /* 清除浮动 */
+    font-family:sans-serif;
+}
+
+.post-item:hover {
+    background-color: #f2f2f2; /* 鼠标悬停时的背景颜色 */
+}
+.post-name {
+    float: left;
+    padding-left: 5px;
+    color: #484848;
+}
+
+
+
+.post-tag {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 120%;
+    font-family: 'Me';
+    /* border-bottom: 1px solid black; */
+}
+
+
+.post-item .post-date {
+    color: #7d7d7d;
+    float: right;
+    padding-top: 2px;
+    font-size: medium;
+    margin-right: 20px;
+}
+
+
+.date {
+    font-family: 'Andika';
+    overflow: hidden; /* 清除浮动 */
+    color: rgb(144, 144, 144);
+    user-select: none;
+}table
+.date span.post-date {
+    float: left; /* 左浮动 */
+}
+.date span.edit-date {
+    float: right; /* 右浮动 */
+}
+
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -190,99 +214,46 @@ code {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 250px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
-
-/* Your existing CSS styles */
-
-/* Modified styles for dropdown content */
-.dropdown-content {
-    overflow-y: auto; /* 添加滚动条 */
-    max-height: 300px; /* 固定高度 */
-    width: 200px; /* 固定宽度 */
-    padding-left: 20px;
-}
-
-.dropdown-content a {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 90%; /* 减小字体大小 */
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-
-.dropdown-content ul {
-    padding-left: 20px;
-}
-
-.dropdown-content a:hover {
-    color: #39a3e1;
+    padding-right:20px ;
+    display: none;
+    border: 1px solid black;
+    width:max-content;
 }
 
 .dropdown:hover .dropdown-content {
+    top: 33px; /* 最终位置在下方 */
+    margin-left: 5px;
     display: block;
 }
 
-
-.posttime {
-    font-style: italic;
-    font-size: 90%;
-    font-family: 'Andika';
-    overflow: hidden; /* 清除浮动 */
-    color: rgb(156, 156, 156);
-    user-select: none;
-}
-.posttime span {
-    float: left; /* 左浮动 */
-}
-.posttime span.editdate {
-    float: right; /* 右浮动 */
+.dropdown img {
+    width: 30px;
 }
 
-
-
-
-.post-item {
-    cursor: pointer; /* 鼠标样式设置为手型 */
-    transition: background-color 0.3s; /* 添加过渡效果 */
-    padding: 3px;
-    border-radius: 3px;
+.dropdown-content ul {
+    padding-left: 18px;
 }
 
-.post-item:hover {
-    background-color: #f0f0f0; /* 鼠标悬停时的背景颜色 */
+.dropdown-content a {
+    color: #000000;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    color: #d43030;
+}
+.dropdown-content li {
+    list-style-type: none;
+    line-height: 1.8;
 }
 
-
-.post-type {
-    user-select: none;
-    text-align: center;
-    font-size: 150%;
-    margin-top: 20px;
+h1 {
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
-
-.post-item {
-    overflow: hidden; /* 清除浮动 */
-}
-
-.post-item span.name {
-    float: left;
-}
-
-.post-item span.time {
-    float: right;
-    font-family: 'Andika';
-    font-size: 90%;
-    color: grey;
-    user-select: none;
-}
-
-
 
 table {
     width: 100%;
@@ -297,4 +268,76 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+html{
+    scroll-padding-top: 75px;
+}
+
+
+/* 隐藏input和tab内容 */
+.tab-frame {
+    border-radius: 2px;
+    border: 1px solid #6d6c6c;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.tab-frame input,
+.tab-content {
+  display: none;
+}
+
+
+a.home-button {
+    margin-left: 15px;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+a.home-button img {
+    margin-bottom: 0;
+    width: 30px;
+}
+
+
+
+
+/* 导航栏样式：未选中时 */
+.tab-frame label {
+    text-align: center;
+    padding: 5px 20px;
+    cursor: pointer;
+    float: left;
+    border-right: 1px solid rgb(138, 137, 137);
+    border-bottom: 1px solid rgb(150, 149, 149);
+    width: calc(50% - 40.5px); /* 让标签占据整个宽度，减去边框的宽度 */
+}
+/* 让第二个标签没有右边框 */
+.tab-frame label:last-of-type {
+    border-right: none;
+}
+/* 导航栏样式：选中时 */
+.tab-frame input:checked + label {
+  background-color: #ededed;
+  cursor: default;
+}
+/* Tab内容样式 */
+.tab-frame .tab-content {
+    padding: 20px;
+    padding-top: 30px;
+}
+/* 点击的时候显示tab内容，即input checked的时候显示label*/
+.tab-frame input:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
+.tab-frame input:nth-of-type(2):checked ~ .tab-content:nth-of-type(2) {
+  display: block;
+}
+
+
+.post-title {
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
 }

@@ -1,2 +1,4 @@
 xv6-chinese/
-articles-md/
+articles/
+.gitgnore
+generate.py

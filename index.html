@@ -1,93 +1,118 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="/source/images/favicon.ico" rel="icon" />
-    <title>My Blog</title>
-    <link href="/source/styles.css" rel="stylesheet" />
-</head>
-
-<body>
+<html>
+  <head>
+    <title>Achoj's Wiki</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Achoj's Wiki</title>
+    <link href="/source/images/favicon.ico" rel="icon">
+    <link href="/source/styles.css" rel="stylesheet">
+    <script>    
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}</script>
+  </head>
+  <body>
     <header>
-        <div class="header-content">
-            <span class="hd"><a href="index.html">Achoj's Blog</a></span>
-            <span class="homepage">
-                <a href="index.html"><img alt="Homepage" src="/source/images/homepage.ico" title="Back to homepage"
-                        width="18px" /></a>
-            </span>
-            <span class="additional-text">Less is moreeeeeeeeee</span>
-        </div>
+      <a class="wiki-header" href="/index.html">AchoJ's Wiki</a>
+      <a class="home-button" href="/index.html">
+        <img src="/source/images/home.svg" title="home">
+      </a>
     </header>
     <div class="content" id="md">
-        <p>
-            <img alt="" class="avatar" src="/source/images/avatar.png" width="200px" />
-            <br />
-            <div class="avatar-name">Achoj</div>
-        </p>
-        <p style="color: rgb(55, 117, 251);">Build this website with gpt</p>
-        <p>记录任何我想记录的东西。<br> 喜欢编程、音乐跟电影。</p>
-        <hr />
-
-
-
-
-
-        <div class="post-type">编程</div>
-        <div id="file-list" type="programming">
-            <div class="post-item" path="articles/2024/03_24_网站初步设计_p.md">
-                <span class="name">网站初步设计</span>
-                <span class="time">2024-03-24</span>
-            </div><!-- end of programming -->
+      <div class="avatar-area">
+        <img class="avatar" src="/source/images/avatar.png" width="230px">
+        <div class="avatar-content">
+          <div class="avatar-name">AchoJ</div>
+          <p>Build the wiki with gpt</p>
+          <p>记录任何我想记录的东西</p>
+          <hr>
         </div>
-
-
-
-
-        <div class="post-type">随记</div>
-        <div class="file-list" type="normal">
-            <div class="post-item" path="articles/2024/03-27-待做.md">
-                <span class="name">整理一下需要做的事情</span>
-                <span class="time">2024-03-27</span>
-            </div>
-            <div class="post-item" path="articles/2024/03-27-日记.md">
-                <span class="name">日记-03-27</span>
-                <span class="time">2024-03-27</span>
-            </div>
-            <div class="post-item" path="articles/2024/03-26-日记.md">
-                <span class="name">日记-03-26</span>
-                <span class="time">2024-03-26</span>
-            </div>
-            <div class="post-item" path="articles/2024/03_08_考研规划_n.md">
-                <span class="name">考研规划</span>
-                <span class="time">2024-03-08</span>
-            </div>
-            <div class="post-item" path="articles/2024/02_28_测试文章_n.md">
-                <span class="name">测试文章</span>
-                <span class="time">2024-02-28</span>
-            </div>
-            
-            <div class="post-item" path="articles/2023/12_01_来自2023的测试文章_n.md">
-                <span class="name">来自2023的测试文章</span>
-                <span class="time">2023-12-01</span>
-            </div><!-- end of normal -->
+      </div>
+      <div class="post-title">文章</div>
+      <div class="tab-frame">
+        <input checked="checked" id="tab1" name="tab" type="radio">
+        <label for="tab1">时间排序</label>
+        <input id="tab2" name="tab" type="radio">
+        <label for="tab2">标签排序</label>
+        <div class="tab-content">
+          <div class="post-tag">2024-03</div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-待做.html'">
+            <span class="post-name">待做</span>
+            <span class="post-date">2024.03.27</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-日记.html'">
+            <span class="post-name">3月27日记</span>
+            <span class="post-date">2024.03.27</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-26-日记.html'">
+            <span class="post-name">3月26日记</span>
+            <span class="post-date">2024.03.26</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03_24_网站初步设计_p.html'">
+            <span class="post-name">网站初步设计</span>
+            <span class="post-date">2024.03.24</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03_08_考研规划_n.html'">
+            <span class="post-name">考研规划</span>
+            <span class="post-date">2024.03.08</span>
+          </div>
+          <div class="post-tag">2024-02</div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/02_28_测试文章_n.html'">
+            <span class="post-name">2024年的测试文章</span>
+            <span class="post-date">2024.02.28</span>
+          </div>
+          <div class="post-tag">2023-03</div>
+          <div class="post-item" onclick="window.location.href='articles-html/2023/12_01_来自2023的测试文章_n.html'">
+            <span class="post-name">来自2023的测试文章</span>
+            <span class="post-date">2023.03.28</span>
+          </div>
         </div>
-
-
+        <div class="tab-content">
+          <div class="post-tag">Diary</div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-待做.html'">
+            <span class="post-name">待做</span>
+            <span class="post-date">2024.03.27</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-日记.html'">
+            <span class="post-name">3月27日记</span>
+            <span class="post-date">2024.03.27</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-26-日记.html'">
+            <span class="post-name">3月26日记</span>
+            <span class="post-date">2024.03.26</span>
+          </div>
+          <div class="post-tag">Test-post</div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03_24_网站初步设计_p.html'">
+            <span class="post-name">网站初步设计</span>
+            <span class="post-date">2024.03.24</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/02_28_测试文章_n.html'">
+            <span class="post-name">2024年的测试文章</span>
+            <span class="post-date">2024.02.28</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2023/12_01_来自2023的测试文章_n.html'">
+            <span class="post-name">来自2023的测试文章</span>
+            <span class="post-date">2023.03.28</span>
+          </div>
+          <div class="post-tag">Study</div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03_08_考研规划_n.html'">
+            <span class="post-name">考研规划</span>
+            <span class="post-date">2024.03.08</span>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const posts = document.querySelectorAll(".post-item");
-        posts.forEach(post => {
-            post.addEventListener("click", function () {
-                const path = this.getAttribute("path");
-                window.location.href = "post.html?path=" + encodeURIComponent(path);
-            });
-        });
-    });
-</script>
-
+    <footer>Powered By Python&amp;GPT</footer>
+  </body>
 </html>
