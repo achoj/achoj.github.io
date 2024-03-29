@@ -280,7 +280,7 @@ html{
     border-radius: 2px;
     border: 1px solid #6d6c6c;
     overflow-y: auto;
-    max-height: 500px;
+    max-height: 800px;
 }
 
 .tab-frame input,
