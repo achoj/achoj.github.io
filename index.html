@@ -7,20 +7,20 @@
     <title>Achoj's Wiki</title>
     <link href="/source/images/favicon.ico" rel="icon">
     <link href="/source/styles.css" rel="stylesheet">
-    <script>    
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}</script>
+    <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }</script>
   </head>
   <body>
     <header>
@@ -49,6 +49,10 @@ function openTab(evt, tabName) {
           <div class="post-tag">2024-03</div>
           <div class="post-item" onclick="window.location.href='articles-html/2024/03-29-日记.html'">
             <span class="post-name">3月29日记</span>
+            <span class="post-date">2024.03.29</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-30-日记.html'">
+            <span class="post-name">3月30日记</span>
             <span class="post-date">2024.03.29</span>
           </div>
           <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-待做.html'">
@@ -86,6 +90,10 @@ function openTab(evt, tabName) {
           <div class="post-tag">Diary</div>
           <div class="post-item" onclick="window.location.href='articles-html/2024/03-29-日记.html'">
             <span class="post-name">3月29日记</span>
+            <span class="post-date">2024.03.29</span>
+          </div>
+          <div class="post-item" onclick="window.location.href='articles-html/2024/03-30-日记.html'">
+            <span class="post-name">3月30日记</span>
             <span class="post-date">2024.03.29</span>
           </div>
           <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-待做.html'">
