@@ -222,6 +222,8 @@ img.avatar {
     display: none;
     border: 1px solid black;
     width:max-content;
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 .dropdown:hover .dropdown-content {
