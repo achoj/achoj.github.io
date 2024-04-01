@@ -48,7 +48,7 @@ def create_html_document(html_content, post_date, edit_date, toc_content):
                 span("post-time:" + post_date[0], cls="post-date")
                 span("edit-time:" + edit_date[0], cls="edit-date")
             div(raw(html_content), cls="markdown-content")
-
+        footer("Powered By Python&GPT")
     return doc
 
 def write_html_to_file(doc, filename):
