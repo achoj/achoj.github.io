@@ -1,134 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Achoj's Wiki</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Achoj's Wiki</title>
-    <link href="/source/images/favicon.ico" rel="icon">
-    <link href="/source/styles.css" rel="stylesheet">
-    <script>
-            function openTab(evt, tabName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(tabName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }</script>
-  </head>
-  <body>
-    <header>
-      <a class="wiki-header" href="/index.html">AchoJ's Wiki</a>
-      <a class="home-button" href="/index.html">
-        <img src="/source/images/home.svg" title="home">
-      </a>
-    </header>
-    <div class="content" id="md">
-      <div class="avatar-area">
-        <img class="avatar" src="/source/images/avatar.png" width="230px">
-        <div class="avatar-content">
-          <div class="avatar-name">AchoJ</div>
-          <p>Build the wiki with gpt</p>
-          <p>记录任何我想记录的东西</p>
-          <hr>
-        </div>
-      </div>
-      <div class="post-title">文章</div>
-      <div class="tab-frame">
-        <input checked="checked" id="tab1" name="tab" type="radio">
-        <label for="tab1">时间排序</label>
-        <input id="tab2" name="tab" type="radio">
-        <label for="tab2">标签排序</label>
-        <div class="tab-content">
-          <div class="post-tag">2024-03</div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-30-日记.html'">
-            <span class="post-name">3月30日记</span>
-            <span class="post-date">2024.03.30</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-29-日记.html'">
-            <span class="post-name">3月29日记</span>
-            <span class="post-date">2024.03.29</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-日记.html'">
-            <span class="post-name">3月27日记</span>
-            <span class="post-date">2024.03.27</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-待做.html'">
-            <span class="post-name">待做</span>
-            <span class="post-date">2024.03.27</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-26-日记.html'">
-            <span class="post-name">3月26日记</span>
-            <span class="post-date">2024.03.26</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03_24_网站初步设计_p.html'">
-            <span class="post-name">网站初步设计</span>
-            <span class="post-date">2024.03.24</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03_08_考研规划_n.html'">
-            <span class="post-name">考研规划</span>
-            <span class="post-date">2024.03.08</span>
-          </div>
-          <div class="post-tag">2024-02</div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/02_28_测试文章_n.html'">
-            <span class="post-name">2024年的测试文章</span>
-            <span class="post-date">2024.02.28</span>
-          </div>
-          <div class="post-tag">2023-03</div>
-          <div class="post-item" onclick="window.location.href='articles-html/2023/12_01_来自2023的测试文章_n.html'">
-            <span class="post-name">来自2023的测试文章</span>
-            <span class="post-date">2023.03.28</span>
-          </div>
-        </div>
-        <div class="tab-content">
-          <div class="post-tag">Diary</div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-30-日记.html'">
-            <span class="post-name">3月30日记</span>
-            <span class="post-date">2024.03.30</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-29-日记.html'">
-            <span class="post-name">3月29日记</span>
-            <span class="post-date">2024.03.29</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-日记.html'">
-            <span class="post-name">3月27日记</span>
-            <span class="post-date">2024.03.27</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-27-待做.html'">
-            <span class="post-name">待做</span>
-            <span class="post-date">2024.03.27</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03-26-日记.html'">
-            <span class="post-name">3月26日记</span>
-            <span class="post-date">2024.03.26</span>
-          </div>
-          <div class="post-tag">Test-post</div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03_24_网站初步设计_p.html'">
-            <span class="post-name">网站初步设计</span>
-            <span class="post-date">2024.03.24</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/02_28_测试文章_n.html'">
-            <span class="post-name">2024年的测试文章</span>
-            <span class="post-date">2024.02.28</span>
-          </div>
-          <div class="post-item" onclick="window.location.href='articles-html/2023/12_01_来自2023的测试文章_n.html'">
-            <span class="post-name">来自2023的测试文章</span>
-            <span class="post-date">2023.03.28</span>
-          </div>
-          <div class="post-tag">Study</div>
-          <div class="post-item" onclick="window.location.href='articles-html/2024/03_08_考研规划_n.html'">
-            <span class="post-name">考研规划</span>
-            <span class="post-date">2024.03.08</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer>Powered By Python&amp;GPT</footer>
-  </body>
+<head>
+  <title>Achoj's Wiki</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Achoj's Web Page</title>
+  <link href="/source/images/favicon.ico" rel="icon">
+  <link href="/templates/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="content">
+    <h1>AchoJ's Web Page</h1>
+    <table width="100%">
+      <tr>
+        <td width="50%" valign="top">
+          
+          <h2>project</h2>
+          <ul>
+            <li>
+              <a href="/posts/dairy/2024/04-01-日记/">网站文章格式测试</a><br>
+            <li>
+              <a href="/posts/mindmap/demo.html">Mindmap思维导图</a><br>
+            <li>
+              <a href="https://github.com/googleapis/java-storage-nio">java-storage-nio</a><br>
+          </ul>
+
+        <td width="50%" valign="top">
+
+          <h2>post</h2>
+
+          <ul>
+
+            <li>
+              <a href="matmul/">llama now goes faster on cpus</a>
+
+            <li>
+              <a href="oneliners/">llms 的 Bash 单行命令</a>
+
+            <li>
+              <a href="cosmo3/">宇宙主义第三版</a>
+
+            <li>
+              <a href="sorting/">DeepMind 排序算法</a>
+
+            <li>
+              <a href="mmap/">Edge AI 刚刚变得更快</a>
+
+            <li>
+              <a href="rusage/">可移植的 rusage 命令</a>
+
+            <li>
+              <a href="endian.html">字节顺序惨案</a>
+          </ul>
+
+    </table>
+
+  </div>
+</body>
+
 </html>

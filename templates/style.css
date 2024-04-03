@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Me';
+    src: url("/asserts/fonts/MeriendaOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'kalam';
+    src: url("/asserts/fonts/Kalam-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Andika';
+    src: url("/asserts/fonts/Andika-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('/asserts/fonts/Inter-Regular.ttf');
+  }
+
+html {
+    font-family: 'inter', sans-serif;
+    font-size: 14pt;
+}
+  
+body {
+    max-width: 960px;
+    min-width: 660px;
+    margin: 0 auto 0 auto;
+    margin-top: 2em;
+}
+
+.content {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+
+h1 {
+    /* font-family: 'kalam'; */
+    margin: 0;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+td li {
+    margin-bottom: 5px;
+}
+
+td a {
+    text-decoration:none;
+}
+
