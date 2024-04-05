@@ -19,16 +19,20 @@
 }
 
 html {
-  font-family: Roboto, sans-serif;
+  font-family: 'source sans pro', 'Noto';
   font-size: 14pt;
 }
 
 body {
-  width: 80ch;
+  width: 75ch;
   max-width: calc(100vw - 3em);
   margin: 2em auto 200px auto;
 }
 
+p {
+  color: #2f2f2f;
+  line-height: 1.5;
+}
 
 .site {
   margin-top: .5em;
@@ -84,6 +88,6 @@ table {
 
 
 td, th {
-  border: 1px solid #7c7c7c;
+  border: 1px solid #454545;
   padding: 8px;
 }

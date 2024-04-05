@@ -14,12 +14,12 @@
 }
 
 @font-face {
-    font-family: 'inter';
-    src: url('/asserts/fonts/Inter-Regular.ttf');
-  }
+    font-family: 'source sans pro';
+    src: url('/asserts/fonts/SourceSans3-Regular.ttf');
+}
 
 html {
-    font-family: 'inter', sans-serif;
+    font-family: 'source sans pro', sans-serif;
     font-size: 14pt;
 }
   
@@ -46,9 +46,11 @@ h1 {
 
 td li {
     margin-bottom: 5px;
+    color: #404040;
 }
 
 td a {
     text-decoration:none;
+    color: #404040;
 }
 
