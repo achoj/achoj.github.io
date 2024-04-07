@@ -22,9 +22,12 @@
 }
 
 
+
+
 body {
     margin: 0;
     font-family: 'Andika', Helvetica, sans-serif;
+    background-color: #fcfcfc;
 }
 
 
@@ -33,35 +36,28 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    color: #000000;
-    padding: 8px 3%;
-    padding-top: 14px;
+    padding: 0 3%;
     text-align: left;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px); /* 应用一个10像素的模糊效果 */
     background-color: rgba(255, 255, 255, 0.7); /* 背景颜色，透明度根据需求调*/
     z-index: 1000;
-    /* 确保 header 在顶部 */
 }
 
 
 .content {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 60%;
     margin: 40px auto 20px;
-    /* 添加额外的顶部间距，以防止内容被header遮挡 */
     background-color: rgb(255, 255, 255);
     padding: 40px;
     padding-bottom: 30px;
     margin-bottom: 200px;
-    margin-top: 80px;
-    box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .9), 0 0px 3px -3px rgba(0, 0, 0, .9);
-    /* border-radius: 3px; */
-    margin-left: 10%;
-    /* 添加这一行来使内容向左偏移 */
+    margin-left: 13%;
+    box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
     min-width: 630px;
     min-height: 500px;
-    font-size: 110%;
-    color: #3c3c3c;
+    font-size: 100%;
 }
 
 footer {
@@ -78,14 +74,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
         min-width: 350px;
-    }
-
-    .additional-text {
-        display: none;
-    }
-
-    .header-content span.drop::after {
-        display: none;
     }
 
 }
@@ -108,17 +96,16 @@ code {
 
 .wiki-header {
     font-family: 'statis';
-    font-size: 200%;
-    color: rgb(0, 0, 0);
+    font-size: 160%;
+    color: rgb(55, 55, 55);
     text-decoration: none;
 }
 
 .wiki-header::after {
     content: "";
-    margin-left: 30px;
-    padding-left: 15px;
+    margin-left: 3%;
     border-left: 2px solid #dddddd;
-    height: 40px;
+    height: 45px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -159,7 +146,6 @@ img.avatar {
     margin-left: 20px;
     border-radius: 3px;
     overflow: hidden; /* 清除浮动 */
-    font-family:sans-serif;
 }
 
 .post-item:hover {
@@ -170,7 +156,9 @@ img.avatar {
     padding-left: 5px;
     color: #484848;
 }
-
+.post-date {
+    font-family: 'Times New Roman', Times, serif;
+}
 
 
 .post-tag {
@@ -196,150 +184,21 @@ img.avatar {
     overflow: hidden; /* 清除浮动 */
     color: rgb(144, 144, 144);
     user-select: none;
-}table
-.date span.post-date {
-    float: left; /* 左浮动 */
-}
-.date span.edit-date {
-    float: right; /* 右浮动 */
 }
 
-
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    border-radius: 3px;
-    background-color: #ffffff;
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding-right:20px ;
-    display: none;
-    border: 1px solid black;
-    width:max-content;
-    overflow-y: auto;
-    max-height: 400px;
-}
-
-.dropdown:hover .dropdown-content {
-    top: 33px; /* 最终位置在下方 */
-    margin-left: 5px;
-    display: block;
-}
-
-.dropdown img {
-    width: 30px;
-}
-
-.dropdown-content ul {
-    padding-left: 18px;
-}
-
-.dropdown-content a {
-    color: #000000;
-    text-decoration: none;
-}
-.dropdown-content a:hover {
-    color: #d43030;
-}
-.dropdown-content li {
-    list-style-type: none;
-    line-height: 1.8;
-}
-
-h1 {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-th {
-    background-color: #f2f2f2;
-}
 
 html{
     scroll-padding-top: 75px;
 }
 
 
-/* 隐藏input和tab内容 */
-.tab-frame {
-    border-radius: 2px;
-    border: 1px solid #6d6c6c;
-    overflow-y: auto;
-    max-height: 800px;
-}
-
-.tab-frame input,
-.tab-content {
-  display: none;
-}
-
 
 a.home-button {
-    margin-left: 15px;
-    margin-right: 30px;
+    margin-left: 3%;
     text-decoration: none;
 }
 
 a.home-button img {
-    margin-bottom: 0;
-    width: 30px;
-}
 
-
-
-
-/* 导航栏样式：未选中时 */
-.tab-frame label {
-    text-align: center;
-    padding: 5px 20px;
-    cursor: pointer;
-    float: left;
-    border-right: 1px solid rgb(138, 137, 137);
-    border-bottom: 1px solid rgb(150, 149, 149);
-    width: calc(50% - 40.5px); /* 让标签占据整个宽度，减去边框的宽度 */
-}
-/* 让第二个标签没有右边框 */
-.tab-frame label:last-of-type {
-    border-right: none;
-}
-/* 导航栏样式：选中时 */
-.tab-frame input:checked + label {
-  background-color: #ededed;
-  cursor: default;
-}
-/* Tab内容样式 */
-.tab-frame .tab-content {
-    padding: 20px;
-    padding-top: 30px;
-}
-/* 点击的时候显示tab内容，即input checked的时候显示label*/
-.tab-frame input:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
-.tab-frame input:nth-of-type(2):checked ~ .tab-content:nth-of-type(2) {
-  display: block;
-}
-
-
-.post-title {
-    font-size: 200%;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 50px;
+    width: 25px;
 }
