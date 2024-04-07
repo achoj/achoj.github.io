@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'kalam';
+    src: url("/fonts/Kalam-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'statis';
+    src: url("/fonts/Satisfy-Regular.ttf");
+}
+
+body {
+    margin-left: 30px;
+    background-color: rgba(208, 214, 220, 0.1);
+    font-family: 'Open sans', Sans Serif,Sans;
+}
+
+header {
+    font-family: 'kalam';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    /* 应用一个10像素的模糊效果 */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 背景颜色，透明度根据需求调*/
+    z-index: 1000;
+}
+
+.wiki-header {
+    font-family: 'statis';
+    font-size: 130%;
+    color: rgb(98, 127, 164);
+    text-decoration: none;
+    padding-left: 2%;
+    padding-right: 3%;
+}
+
+.content {
+    width: 50%;
+    padding: 2rem 4rem 5rem 4rem;
+    margin: 30px 27% 80px auto;
+    box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
+    min-width: 650px;
+    min-height: 500px;
+    border-radius: 3px;
+    font-size: 110%;
+}
+
+footer {
+    text-align: center;
+    color: rgb(134, 0, 229);
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+
+@media (max-width: 800px) {
+    .content {
+        width: 85%;
+        /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 350px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+}

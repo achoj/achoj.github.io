@@ -27,7 +27,10 @@ def create_html_document(html_content, post_date, logo_path, title):
     with doc.head:
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=0.55")
-        link(rel="stylesheet", href="/source/styles.css")
+        link(rel="stylesheet", href="/source/post.css")
+        link(rel="stylesheet",href="/source/default.min.css")
+        script( src="/source/highlight.min.js")
+        script(raw("hljs.highlightAll();"))
 
     with doc:
         with header():
@@ -39,7 +42,8 @@ def create_html_document(html_content, post_date, logo_path, title):
                 a("@achoj",href="https://github.com/achoj")
             h1(title)
             if logo_path != "":
-             img(src=logo_path[0], height="220px", cls="logo")
+                with p(cls="logo"):
+                    img(src=logo_path[0], width="300px")
             div(raw(html_content), cls="markdown-content")
         footer("Powered By Python&GPT")
     return doc
@@ -83,12 +87,11 @@ def generate_index(posts_list):
     with doc.head:
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=0.6")
-        link(rel="stylesheet", href="/source/styles.css")
+        link(rel="stylesheet", href="/source/index.css")
 
     with doc:
         with header():
             a("AchoJ's Web Page", href="/index.html", cls="wiki-header")
-            a("Back to home", href="/index.html", cls="back-to-home")
         with div(cls="content", id="md"):
             with table(width="100%"):
                 tr()
