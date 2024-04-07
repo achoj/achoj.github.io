@@ -21,43 +21,71 @@
     src: url("./font/Satisfy-Regular.ttf");
 }
 
-
+@font-face {
+    font-family: 'Open sans';
+    src: url("./font/OpenSans-Regular.ttf");
+}
 
 
 body {
     margin: 0;
-    font-family: 'Andika', Helvetica, sans-serif;
     background-color: #fcfcfc;
+    background-color: #f7f7f7;
 }
 
 
 header {
+    font-family: 'Open sans', Helvetica, sans-serif;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 3%;
+    padding: 5px ;
     text-align: left;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px); /* 应用一个10像素的模糊效果 */
-    background-color: rgba(255, 255, 255, 0.7); /* 背景颜色，透明度根据需求调*/
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    /* 应用一个10像素的模糊效果 */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 背景颜色，透明度根据需求调*/
     z-index: 1000;
+}
+
+.wiki-header {
+    font-family: 'statis';
+    font-size: 130%;
+    color: rgb(98, 127, 164);
+    text-decoration: none;
+    padding-left: 2%;
+    padding-right: 3%;
+}
+
+
+.wiki-header::after {
+    content: "";
+    margin-left: 3%;
+    border-left: 1px solid #bfbfbf;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+html {
+    scroll-padding-top: 75px;
 }
 
 
 .content {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open sans', Helvetica, sans-serif;
     width: 60%;
-    margin: 40px auto 20px;
     background-color: rgb(255, 255, 255);
-    padding: 40px;
-    padding-bottom: 30px;
-    margin-bottom: 200px;
-    margin-left: 13%;
+    padding: 30px 60px 30px 60px;
+    margin: 30px 0 80px 12%;
     box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
     min-width: 630px;
     min-height: 500px;
     font-size: 100%;
+    border-radius: 3px;
 }
 
 footer {
@@ -78,127 +106,37 @@ footer {
 
 }
 
-/* 美化代码块 */
-pre code {
-    font-family: 'Hack';
-    line-height: 1.2;
+
+
+.logo {
+    width: 320;
+    text-align: center;
+    margin: 1rem 1rem 1rem 2rem;
 }
 
-/* 美化行内代码 */
-code {
-    font-family: monospace;
-    font-size: 80%;
-    padding: 4px;
-    border-radius: 2px;
-    background-color: #eeeeee;
+@media (min-width: 800px) {
+    .logo {
+        float: right;
+    }
 }
-
-
-.wiki-header {
-    font-family: 'statis';
-    font-size: 160%;
-    color: rgb(55, 55, 55);
-    text-decoration: none;
-}
-
-.wiki-header::after {
-    content: "";
-    margin-left: 3%;
-    border-left: 2px solid #dddddd;
-    height: 45px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-img.avatar {
-    float:inline-start;
-    user-select: none;
-    margin-left: 5%;
-}
-
-.avatar-content {
-    padding-top: 50px;
-}
-
-.avatar-name {
-    font-family:'Times New Roman', Times, serif;
-    font-size: 190%;
-    margin-top: 25px;
-}
-
-.avatar-area {
-    margin-bottom: 30px;
-}
-
-.avatar-area p{
-    margin: 10px;
-}
-
-.avatar-area hr {
-    margin-top: 20px;
-}
-
-
-.post-item {
-    cursor: pointer; /* 鼠标样式设置为手型 */
-    transition: background-color 0.3s; /* 添加过渡效果 */
-    padding: 5px;
-    margin-left: 20px;
-    border-radius: 3px;
-    overflow: hidden; /* 清除浮动 */
-}
-
-.post-item:hover {
-    background-color: #f2f2f2; /* 鼠标悬停时的背景颜色 */
-}
-.post-name {
-    float: left;
-    padding-left: 5px;
-    color: #484848;
-}
-.post-date {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
-.post-tag {
-    margin-top: 30px;
-    margin-bottom: 5px;
-    font-size: 120%;
-    font-family: 'Me';
-    /* border-bottom: 1px solid black; */
-}
-
-
-.post-item .post-date {
-    color: #7d7d7d;
+.site {
+    margin-top: 2.5em;
+    margin-left: .5em;
     float: right;
-    padding-top: 2px;
-    font-size: medium;
-    margin-right: 20px;
+    text-align: right;
+  }
+
+p {
+    text-align: justify;
 }
 
-
-.date {
-    font-family: 'Andika';
-    overflow: hidden; /* 清除浮动 */
-    color: rgb(144, 144, 144);
-    user-select: none;
+.site a {
+    font-family: 'Me';
+    padding-left: 5px;
 }
 
+code {
+    font-family: 'Hack';
+    font-size: 80%;
 
-html{
-    scroll-padding-top: 75px;
-}
-
-
-
-a.home-button {
-    margin-left: 3%;
-    text-decoration: none;
-}
-
-a.home-button img {
-
-    width: 25px;
 }
