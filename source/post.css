@@ -4,20 +4,16 @@
     src: url("/fonts/OpenSans-Regular.ttf");
 }
 
+
 @font-face {
-    font-family: 'Hack';
+    font-family: 'Roboto Mono';
     size: 150%;
-    src: url("/fonts/Hack-Regular.ttf");
+    src: url("/fonts/RobotoMono-Regular.ttf");
 }
 @font-face {
     font-family: 'statis';
     src: url("/fonts/Satisfy-Regular.ttf");
 }
-@font-face {
-    font-family: 'kalam';
-    src: url("/fonts/Kalam-Regular.ttf");
-}
-
 body {
     margin-left: 30px;
     background-color: rgba(208, 214, 220, 0.1);
@@ -30,7 +26,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(8px);
@@ -58,10 +54,10 @@ header {
 }
 
 .content {
-    background-color: #E6E6E61A;
-    width: 50%;
+    /* background-color: #E6E6E61A; */
+    width: 60%;
     padding: 2rem 4rem 5rem 4rem;
-    margin: 30px 27% 80px auto;
+    margin: 30px 20% 80px auto;
     box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
     min-width: 650px;
     min-height: 500px;
@@ -119,7 +115,7 @@ p {
 }
 
 .hljs {
-    font-family: 'Hack';
+    font-family: 'Roboto Mono';
     font-size: 80%;
 }
 

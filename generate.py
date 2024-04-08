@@ -39,13 +39,12 @@ def create_html_document(html_content, post_date, logo_path, title):
         with div(cls="content", id="md"):
             with p(cls="site"):
                 span(post_date,cls="post_date")
-                a("@achoj",href="https://github.com/achoj")
+                a("@achoj",href="mailto:shoutoudelanfanqie@gmail.com")
             h1(title)
             if logo_path != "":
                 with p(cls="logo"):
                     img(src=logo_path[0], width="300px")
             div(raw(html_content), cls="markdown-content")
-        footer("Powered By Python&GPT")
     return doc
 
 def write_html_to_file(doc, filename):
@@ -90,9 +89,8 @@ def generate_index(posts_list):
         link(rel="stylesheet", href="/source/index.css")
 
     with doc:
-        with header():
-            a("AchoJ's Web Page", href="/index.html", cls="wiki-header")
         with div(cls="content", id="md"):
+            h1("Achoj's Web Page")
             with table(width="100%"):
                 tr()
                 with td(width="50%", valign="top"):
@@ -119,9 +117,6 @@ def generate_index(posts_list):
                                     a(title, href=html_filepath)
                                     br()
                                     small(item["post_date"], cls="post-date")
-
-            
-        footer("Powered By Python&GPT")
 
     with open('index.html', 'w', encoding='utf-8') as file:
         file.write(doc.render(pretty=True))
