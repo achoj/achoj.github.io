@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=0.55" name="viewport">
     <link href="/source/post.css" rel="stylesheet">
-    <link href="/source/default.min.css" rel="stylesheet">
-    <script src="/source/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
   </head>
   <body>
     <header>
@@ -23,32 +20,15 @@
       <div class="markdown-content"><p>这篇文章包含markdown语法基本的内容, 目的是放在自己的博客园上, 通过开发者控制台快速选中,<br />
 从而自定义自己博客园markdown样式.当然本文也可以当markdown语法学习之用.  </p>
 <p>简单的测试</p>
-<pre><code class="language-cpp">#include &quot;spdlog/spdlog.h&quot;
-
-int main() 
-{
-    spdlog::info(&quot;Welcome to spdlog!&quot;);
-    spdlog::error(&quot;Some error message with arg: {}&quot;, 1);
-
-    spdlog::warn(&quot;Easy padding in numbers like {:08d}&quot;, 12);
-    spdlog::critical(&quot;Support for int: {0:d};  hex: {0:x};  oct: {0:o}; bin: {0:b}&quot;, 42);
-    spdlog::info(&quot;Support for floats {:03.2f}&quot;, 1.23456);
-    spdlog::info(&quot;Positional args are {1} {0}..&quot;, &quot;too&quot;, &quot;supported&quot;);
-    spdlog::info(&quot;{:&lt;30}&quot;, &quot;left aligned&quot;);
-
-    spdlog::set_level(spdlog::level::debug); // Set global log level to debug
-    spdlog::debug(&quot;This message should be displayed..&quot;);    
-
-    // change log pattern
-    spdlog::set_pattern(&quot;[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v&quot;);
-
-    // Compile time log levels
-    // Note that this does not change the current log level, it will only
-    // remove (depending on SPDLOG_ACTIVE_LEVEL) the call on the release code.
-    SPDLOG_TRACE(&quot;Some trace message with param {}&quot;, 42);
-    SPDLOG_DEBUG(&quot;Some debug message&quot;);
-}
-
+<pre><code class="language-cpp">spdlog::info(&quot;Welcome to spdlog!&quot;);
+spdlog::error(&quot;Some error message with arg: {}&quot;, 1);
+spdlog::warn(&quot;Easy padding in numbers like {:08d}&quot;, 12);
+spdlog::critical(&quot;Support for int: {0:d};  hex: {0:x};  oct: {0:o}; bin: {0:b}&quot;, 42);
+spdlog::info(&quot;Support for floats {:03.2f}&quot;, 1.23456);
+spdlog::info(&quot;Positional args are {1} {0}..&quot;, &quot;too&quot;, &quot;supported&quot;);
+spdlog::info(&quot;{:&lt;30}&quot;, &quot;left aligned&quot;);
+spdlog::set_level(spdlog::level::debug); // Set global log level to debug
+spdlog::debug(&quot;This message should be displayed..&quot;);    
 </code></pre></div>
     </div>
   </body>

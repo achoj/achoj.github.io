@@ -26,7 +26,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5px;
     text-align: left;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(8px);
@@ -48,7 +47,7 @@ header {
     content: "";
     margin-right: 3%;
     border-left: 1px solid #d8d8d8;
-    height: 20px;
+    height: 40px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -108,19 +107,21 @@ footer {
 
 p {
     color: #161c29;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .back-to-home {
     color: #000000;
 }
 
-.hljs {
-    font-family: 'Roboto Mono';
-    font-size: 80%;
+pre {
+    padding-left: 2rem;
 }
 
-
-p {
-    margin-top: 0;
-    margin-bottom: 10px;
+pre code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Roboto Mono';
+    font-size: 80%;
 }

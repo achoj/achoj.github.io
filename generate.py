@@ -28,9 +28,6 @@ def create_html_document(html_content, post_date, logo_path, title):
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=0.55")
         link(rel="stylesheet", href="/source/post.css")
-        link(rel="stylesheet",href="/source/default.min.css")
-        script( src="/source/highlight.min.js")
-        script(raw("hljs.highlightAll();"))
 
     with doc:
         with header():
