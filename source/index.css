@@ -23,15 +23,13 @@ body {
     font-family: 'Open sans', 'SiYuan', Sans Serif,Sans;
 }
 
-h1 {
-    margin-bottom: 1rem;
-}
 
 .content {
-    width: 70%;
-    margin: 50px auto 50px auto;
+    width: 70ch;
+    max-width: calc(100vw - 4em);
+    margin: 2rem auto 5rem auto;
+    padding: 1vw 3rem 2rem 3rem;
     border-radius: 3px;
-    font-size: 110%;
 }
 
 @media (max-width: 800px) {

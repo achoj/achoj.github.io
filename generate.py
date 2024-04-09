@@ -26,17 +26,14 @@ def create_html_document(html_content, post_date, logo_path, title):
     doc = dominate.document(title=title)
     with doc.head:
         meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, initial-scale=0.55")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/source/post.css")
 
     with doc:
-        with header():
-            a("AchoJ's Web Page", href="/index.html", cls="wiki-header")
-            a("Back to home", href="/index.html", cls="back-to-home")
         with div(cls="content", id="md"):
             with p(cls="site"):
                 span(post_date,cls="post_date")
-                a("@achoj",href="mailto:shoutoudelanfanqie@gmail.com")
+                a("@Achoj' Web Page",href="/index.html")
             h1(title)
             if logo_path != "":
                 with p(cls="logo"):
@@ -82,7 +79,7 @@ def generate_index(posts_list):
     doc = dominate.document(title="Achoj's Web Page")
     with doc.head:
         meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, initial-scale=0.6")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/source/index.css")
 
     with doc:
@@ -91,7 +88,7 @@ def generate_index(posts_list):
             with table(width="100%"):
                 tr()
                 with td(width="50%", valign="top"):
-                    h2("Daily articles")
+                    h2("Daily")
                     with ul():
                         for item in posts_list:
                             print(item["type"])
@@ -103,7 +100,7 @@ def generate_index(posts_list):
                                     br()
                                     small(item["post_date"], cls="post-date")
                 with td(width="50%", valign="top"):
-                    h2("Programming articles")
+                    h2("Programming")
                     with ul():
                         for item in posts_list:
                             print(item["type"])

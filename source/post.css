@@ -16,77 +16,22 @@
     font-family: 'SiYuan';
     src: url("/font-min/SiYuan.ttf");
 }
+@font-face {
+    font-family: 'NotoSerifSC';
+    src: url("/font-min/NotoSerifSC-Regular.otf");
+}
 body {
-    margin-left: 30px;
     background-color: rgba(208, 214, 220, 0.1);
-    font-family: 'Open sans', 'SiYuan', Sans Serif,Sans;
+    font-family: 'Open sans', Sans Serif,Sans;
+    font-size: 14pt;
 }
-
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 1000;
-}
-
-.wiki-header {
-    font-family: 'statis';
-    font-size: 140%;
-    color: rgb(98, 127, 164);
-    text-decoration: none;
-    padding-left: 2%;
-    padding-right: 4%;
-}
-
-
-.back-to-home::before {
-    content: "";
-    margin-right: 3%;
-    border-left: 1px solid #d8d8d8;
-    height: 40px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .content {
-    /* background-color: #E6E6E61A; */
-    width: 60%;
-    padding: 2rem 4rem 5rem 4rem;
-    margin: 30px 20% 80px auto;
+    width: 75ch;
+    max-width: calc(100vw - 5em);
+    margin: 2em auto 2em auto;
+    padding: .5rem 2rem 2rem 2rem;
     box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
-    min-width: 650px;
-    min-height: 500px;
-    border-radius: 3px;
-    font-size: 110%;
 }
-
-footer {
-    text-align: center;
-    color: rgb(134, 0, 229);
-    margin-bottom: 10px;
-    user-select: none;
-}
-
-
-@media (max-width: 800px) {
-    .content {
-        width: 85%;
-        /* 当屏幕宽度小于1000px时，将content的宽度设为90% */
-        margin-left: auto;
-        margin-right: auto;
-        min-width: 350px;
-    }
-    body {
-        margin: 0;
-    }
-}
-
 .logo {
     width: 320;
     text-align: center;
@@ -111,10 +56,7 @@ p {
     color: #161c29;
     margin-top: 0;
     margin-bottom: 10px;
-}
-
-.back-to-home {
-    color: #000000;
+    text-align: justify;
 }
 
 pre {
@@ -127,3 +69,4 @@ pre code {
     font-family: 'Roboto Mono';
     font-size: 80%;
 }
+

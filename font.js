@@ -42,7 +42,7 @@ function readFilesInDirectory(directoryPath) {
 // 在所有文件读取完成后执行 Fontmin 处理
 function processAllContent() {
   var fontmin = new Fontmin()
-    .src("./fonts/SiYuan.ttf")
+    .src("./fonts/NotoSerifSC-Regular.otf")
     .dest("./font-min/")
     .use(Fontmin.glyph({ text: allContent }));
 
