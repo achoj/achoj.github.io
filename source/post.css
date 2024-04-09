@@ -1,9 +1,7 @@
-
 @font-face {
     font-family: 'Open sans';
     src: url("/fonts/OpenSans-Regular.ttf");
 }
-
 
 @font-face {
     font-family: 'Roboto Mono';
@@ -12,12 +10,16 @@
 }
 @font-face {
     font-family: 'statis';
-    src: url("/fonts/Satisfy-Regular.ttf");
+    src: url("/fontmins/Satisfy-Regular.ttf");
+}
+@font-face {
+    font-family: 'PingFang SC';
+    src: url("/fontmins/SiYuan.ttf");
 }
 body {
     margin-left: 30px;
     background-color: rgba(208, 214, 220, 0.1);
-    font-family: 'Open sans', Sans Serif,Sans;
+    font-family: 'Open sans', 'PingFang SC', Sans Serif,Sans;
 }
 
 
@@ -47,7 +49,7 @@ header {
     content: "";
     margin-right: 3%;
     border-left: 1px solid #d8d8d8;
-    height: 40px;
+    height: 50px;
     display: inline-block;
     vertical-align: middle;
 }
