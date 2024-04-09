@@ -41,10 +41,9 @@ function readFilesInDirectory(directoryPath) {
 
 // 在所有文件读取完成后执行 Fontmin 处理
 function processAllContent() {
-  console.log(allContent)
   var fontmin = new Fontmin()
     .src("./fonts/SiYuan.ttf")
-    .dest("./fontmins/")
+    .dest("./font-min/")
     .use(Fontmin.glyph({ text: allContent }));
 
   fontmin.run(function(err, files) {
