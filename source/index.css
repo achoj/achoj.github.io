@@ -13,9 +13,14 @@
     src: url("/fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+    font-family: 'SiYuan';
+    src: url("/fontmins/SiYuan.ttf");
+}
+
 body {
     background-color: rgba(208, 214, 220, 0.1);
-    font-family: 'Open sans', Sans Serif,Sans;
+    font-family: 'Open sans', 'SiYuan', Sans Serif,Sans;
 }
 
 h1 {
