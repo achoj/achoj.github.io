@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Open sans';
+    src: url("/assert/fonts/OpenSans-Regular.ttf");
+}
+
+body {
+    background-color: rgba(208, 214, 220, 0.1);
+    font-family: 'Open sans', Sans Serif,Sans;
+    font-size: 13pt;
+}
+
+
+.content {
+    width: 75ch;
+    max-width: calc(100vw - 5em);
+    margin: 1em auto 2em auto;
+    padding: .5rem 2rem 2rem 2rem;
+    border-radius: 3px;
+}
+
+li {
+    margin-bottom: .5rem;
+}

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Open sans';
+    src: url("/assert/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    size: 150%;
+    src: url("/assert/fonts/RobotoMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'kalam';
+    src: url("/assert/fonts/Kalam-Regular.ttf");
+}
+
+body {
+    background-color: rgba(208, 214, 220, 0.1);
+    font-family: 'Open sans', Sans Serif,Sans;
+    font-size: 13pt;
+}
+.content {
+    width: 75ch;
+    max-width: calc(100vw - 5em);
+    margin: 1em auto 2em auto;
+    padding: .5rem 2rem 2rem 2rem;
+    box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
+}
+.logo {
+    width: 320;
+    text-align: center;
+    margin: 1rem 1rem 1rem 2rem;
+}
+
+@media (min-width: 800px) {
+    .logo {
+        float: right;
+    }
+}
+
+.site {
+    margin-top: 2em;
+    margin-left: .5em;
+    float: right;
+    text-align: right;
+    font-family: 'kalam';
+}
+
+p {
+    color: #161c29;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+pre {
+    padding-left: 2rem;
+}
+
+pre code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Roboto Mono';
+    font-size: 80%;
+}
+
