@@ -17,7 +17,6 @@
 body {
     background-color: rgba(208, 214, 220, 0.1);
     font-family: 'Open sans', Sans Serif,Sans;
-    font-size: 13pt;
 }
 .content {
     width: 75ch;
@@ -48,9 +47,15 @@ body {
 
 p {
     color: #161c29;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: justify;
+    line-height: 1.625;
+    text-indent: 2em;
+    overflow-wrap: normal;
+    word-break: normal;
+    display: block;
+    margin-block-start: 1em;
+    margin-inline-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 pre {
