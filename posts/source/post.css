@@ -19,11 +19,12 @@ body {
     font-family: 'Open sans', Sans Serif,Sans;
 }
 .content {
-    width: 75ch;
-    max-width: calc(100vw - 5em);
+    width: 95ch;
+    max-width: calc(100vw - 6em);
     margin: 1em auto 2em auto;
-    padding: .5rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     box-shadow: 0 0px 5px -3px rgba(0, 0, 0.9, .5), 0 0px 5px -3px rgba(0, 0, 0, .5);
+    background-color: #fbfcff;
 }
 .logo {
     width: 320;
@@ -46,7 +47,7 @@ body {
 }
 
 p {
-    color: #161c29;
+    /* color: #161c29; */
     line-height: 1.625;
     text-indent: 2em;
     overflow-wrap: normal;
@@ -56,6 +57,7 @@ p {
     margin-inline-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    font-size: 110%;
 }
 
 pre {
@@ -69,3 +71,7 @@ pre code {
     font-size: 80%;
 }
 
+a {
+    text-decoration: none;
+    color: #3730a3;
+}
